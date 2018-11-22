@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="stuff_submit">Submit</string>
+    <string name="error_missing_stuff">Missing stuff!</string>
+    <string name="about_this_app">About this app</string>
+    <string name="error_updating_stuff">Failed to update stuff!</string>
+    <string name="success_updating_stuff">Updated stuff successfully!</string>
+    <string name="about_app">This application was built for the Android Montreal Devfest 2018.\nhttp://devfest2018.android-montreal.com\n\nSimon Guerout\nhttps://github.com/saiimons</string>
+</resources>
