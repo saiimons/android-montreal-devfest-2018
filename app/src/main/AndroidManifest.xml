@@ -11,7 +11,7 @@
         android:theme="@style/AppTheme">
 
         <activity
-            android:name=".presentation.activities.MainActivity"
+            android:name=".stuff.presentation.activities.MainActivity"
             android:windowSoftInputMode="adjustResize">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -19,6 +19,6 @@
             </intent-filter>
         </activity>
 
-        <activity android:name=".presentation.activities.AboutActivity" />
+        <activity android:name=".stuff.presentation.activities.AboutActivity" />
     </application>
 </manifest>

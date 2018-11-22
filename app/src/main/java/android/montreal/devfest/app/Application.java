@@ -1,7 +1,6 @@
 package android.montreal.devfest.app;
 
 import android.montreal.devfest.DaggerDomainComponent;
-import android.montreal.devfest.app.modules.app.DaggerApplicationComponent;
 
 import javax.inject.Named;
 

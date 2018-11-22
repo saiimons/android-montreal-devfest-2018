@@ -25,13 +25,12 @@ android {
 dependencies {
     implementation 'androidx.appcompat:appcompat:1.0.2'
 
+    implementation project(':stuff_presentation')
+
     implementation project(':stuff_policies')
-    implementation project(':presentation')
     implementation project(':stuff_data')
     implementation project(':stuff_data_gateway')
     implementation project(':stuff_usecases')
-
-    implementation project(':dagger')
 
     implementation 'com.google.dagger:dagger-android:2.19'
     implementation 'com.google.dagger:dagger-android-support:2.19'

@@ -1,8 +1,8 @@
 package android.montreal.devfest.stuff.data.gateway;
 
-import android.montreal.devfest.stuff.usescases.RandomStuffData;
-import android.montreal.devfest.stuff.usescases.RandomStuffGetter;
-import android.montreal.devfest.stuff.usescases.RandomStuffSetter;
+import android.montreal.devfest.stuff.usecases.RandomStuffData;
+import android.montreal.devfest.stuff.usecases.RandomStuffGetter;
+import android.montreal.devfest.stuff.usecases.RandomStuffSetter;
 
 class DataGateway implements RandomStuffSetter, RandomStuffGetter {
     public static final String KEY_STUFF_STR = "rnd.str";

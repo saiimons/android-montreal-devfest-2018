@@ -21,9 +21,4 @@ android {
 
 dependencies {
     implementation project(':stuff_data_gateway')
-
-    implementation project(':dagger')
-
-    implementation 'com.google.dagger:dagger:2.19'
-    annotationProcessor 'com.google.dagger:dagger-compiler:2.19'
 }
