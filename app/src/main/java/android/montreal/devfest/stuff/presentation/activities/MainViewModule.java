@@ -2,7 +2,6 @@ package android.montreal.devfest.stuff.presentation.activities;
 
 import android.content.Context;
 import android.montreal.devfest.dagger.ActivityContext;
-import android.montreal.devfest.stuff.presentation.activities.MainActivity;
 import android.montreal.devfest.stuff.presentation.navigation.Navigator;
 import android.montreal.devfest.stuff.presentation.presenters.MainPresenter;
 import android.montreal.devfest.stuff.presentation.presenters.MainPresenterModule;

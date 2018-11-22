@@ -17,7 +17,7 @@ class AppNavigatorImpl implements AppNavigator {
 
     @Override
     public void showWebsite(Context context) {
-        final Intent  i = new Intent(Intent.ACTION_VIEW);
+        final Intent i = new Intent(Intent.ACTION_VIEW);
         i.setData(Uri.parse("http://devfest2018.android-montreal.com/"));
         context.startActivity(i);
     }
