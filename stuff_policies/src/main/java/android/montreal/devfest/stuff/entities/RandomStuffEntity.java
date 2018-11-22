@@ -1,4 +1,4 @@
-package android.montreal.devfest.entities;
+package android.montreal.devfest.stuff.entities;
 
 public class RandomStuffEntity {
     public final String text;

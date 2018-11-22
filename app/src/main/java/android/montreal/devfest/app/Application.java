@@ -1,6 +1,6 @@
 package android.montreal.devfest.app;
 
-import android.montreal.devfest.DaggerDomainComponent;
+import android.montreal.devfest.stuff.policies.DaggerSuffPoliciesComponent;
 
 import javax.inject.Named;
 
@@ -13,7 +13,7 @@ public class Application extends DaggerApplication {
     protected AndroidInjector<? extends DaggerApplication> applicationInjector() {
         return DaggerApplicationComponent.builder()
                 .with(this)
-                .with(DaggerDomainComponent.create())
+                .with(DaggerSuffPoliciesComponent.create())
                 .build();
     }
 }

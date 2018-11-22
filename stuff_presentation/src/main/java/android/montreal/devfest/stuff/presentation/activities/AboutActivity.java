@@ -1,6 +1,6 @@
 package android.montreal.devfest.stuff.presentation.activities;
 
-import android.montreal.devfest.presentation.R;
+import android.montreal.devfest.stuff.presentation.R;
 import android.os.Bundle;
 
 import androidx.annotation.Nullable;

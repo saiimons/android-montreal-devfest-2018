@@ -1,4 +1,4 @@
-package android.montreal.devfest.policies;
+package android.montreal.devfest.stuff.policies;
 
 import dagger.Binds;
 import dagger.Module;

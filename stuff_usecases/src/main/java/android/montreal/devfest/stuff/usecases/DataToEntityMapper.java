@@ -1,6 +1,6 @@
 package android.montreal.devfest.stuff.usecases;
 
-import android.montreal.devfest.entities.RandomStuffEntity;
+import android.montreal.devfest.stuff.entities.RandomStuffEntity;
 
 class DataToEntityMapper {
     static RandomStuffEntity map(RandomStuffData data) {

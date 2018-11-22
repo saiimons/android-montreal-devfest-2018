@@ -1,7 +1,7 @@
 package android.montreal.devfest.stuff.presentation.activities;
 
 import android.content.Intent;
-import android.montreal.devfest.presentation.R;
+import android.montreal.devfest.stuff.presentation.R;
 import android.montreal.devfest.stuff.presentation.navigation.Navigator;
 import android.montreal.devfest.stuff.presentation.presenters.MainPresenter;
 import android.os.Bundle;

@@ -1,7 +1,7 @@
 package android.montreal.devfest.app;
 
 import android.content.Context;
-import android.montreal.devfest.DomainComponent;
+import android.montreal.devfest.stuff.policies.SuffPoliciesComponent;
 import android.montreal.devfest.stuff.presentation.activities.MainActivityModule;
 import android.montreal.devfest.dagger.ApplicationContext;
 import android.montreal.devfest.stuff.data.DataModule;
@@ -18,7 +18,7 @@ import dagger.android.support.AndroidSupportInjectionModule;
 
 @Component(
         dependencies = {
-                DomainComponent.class,
+                SuffPoliciesComponent.class,
         },
         modules = {
                 DataModule.class,
@@ -39,7 +39,7 @@ public interface ApplicationComponent extends AndroidInjector<Application> {
         @BindsInstance
         Builder with(@ApplicationContext Context context);
 
-        Builder with(DomainComponent component);
+        Builder with(SuffPoliciesComponent component);
 
         ApplicationComponent build();
     }

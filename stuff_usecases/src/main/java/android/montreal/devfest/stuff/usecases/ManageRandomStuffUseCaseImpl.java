@@ -1,6 +1,6 @@
 package android.montreal.devfest.stuff.usecases;
 
-import android.montreal.devfest.policies.RandomStuffVerifier;
+import android.montreal.devfest.stuff.policies.RandomStuffVerifier;
 
 class ManageRandomStuffUseCaseImpl implements ManageRandomStuffUseCase {
     private final RandomStuffGetter getter;

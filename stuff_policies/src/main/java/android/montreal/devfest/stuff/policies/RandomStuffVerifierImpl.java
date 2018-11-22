@@ -1,6 +1,6 @@
-package android.montreal.devfest.policies;
+package android.montreal.devfest.stuff.policies;
 
-import android.montreal.devfest.entities.RandomStuffEntity;
+import android.montreal.devfest.stuff.entities.RandomStuffEntity;
 
 class RandomStuffVerifierImpl implements RandomStuffVerifier {
     @Override
