@@ -10,10 +10,10 @@
             <option value="$PROJECT_DIR$" />
             <option value="$PROJECT_DIR$/app" />
             <option value="$PROJECT_DIR$/dagger" />
-            <option value="$PROJECT_DIR$/domain" />
             <option value="$PROJECT_DIR$/presentation" />
             <option value="$PROJECT_DIR$/stuff_data" />
             <option value="$PROJECT_DIR$/stuff_data_gateway" />
+            <option value="$PROJECT_DIR$/stuff_policies" />
             <option value="$PROJECT_DIR$/stuff_usecases" />
           </set>
         </option>
