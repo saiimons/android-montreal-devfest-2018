@@ -14,13 +14,13 @@ public abstract class DataGatewayModule {
 
     @Provides
     @Singleton
-    static DataGateway dataGateway(StuffStorage stuffStorage) {
-        return new DataGateway(stuffStorage);
+    static StuffDataGateway dataGateway(StuffStorage stuffStorage) {
+        return new StuffDataGateway(stuffStorage);
     }
 
     @Binds
-    abstract RandomStuffGetter randomStuffGetter(DataGateway dataGateway);
+    abstract RandomStuffGetter randomStuffGetter(StuffDataGateway stuffDataGateway);
 
     @Binds
-    abstract RandomStuffSetter randomStuffSetter(DataGateway dataGateway);
+    abstract RandomStuffSetter randomStuffSetter(StuffDataGateway stuffDataGateway);
 }

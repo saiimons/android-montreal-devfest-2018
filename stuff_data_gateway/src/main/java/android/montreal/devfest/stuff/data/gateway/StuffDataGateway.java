@@ -4,19 +4,22 @@ import android.montreal.devfest.stuff.usecases.RandomStuffData;
 import android.montreal.devfest.stuff.usecases.RandomStuffGetter;
 import android.montreal.devfest.stuff.usecases.RandomStuffSetter;
 
-class DataGateway implements RandomStuffSetter, RandomStuffGetter {
-    public static final String KEY_STUFF_STR = "rnd.str";
-    public static final String KEY_STUFF_INT = "rnd.int";
+class StuffDataGateway implements RandomStuffSetter, RandomStuffGetter {
+    private static final String KEY_STUFF_STR = "rnd.str";
+    private static final String KEY_STUFF_INT = "rnd.int";
 
     private final StuffStorage storage;
 
-    public DataGateway(StuffStorage storage) {
+    StuffDataGateway(StuffStorage storage) {
         this.storage = storage;
     }
 
     @Override
     public RandomStuffData getRandomStuff() {
-        return new RandomStuffData(storage.getString(KEY_STUFF_STR), storage.getInt(KEY_STUFF_INT));
+        return new RandomStuffData(
+                storage.getString(KEY_STUFF_STR),
+                storage.getInt(KEY_STUFF_INT)
+        );
     }
 
     @Override
