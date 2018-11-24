@@ -11,6 +11,7 @@ class AppNavigatorImpl implements AppNavigator {
 
     }
 
+    @Override
     public void showViewMore(Context context) {
         context.startActivity(new Intent(context, AboutActivity.class));
     }
