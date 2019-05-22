@@ -5,8 +5,6 @@ interface MainPresenter {
 
     fun updateRandomStuff(text: String, number: Int)
 
-    fun openViewMoreLink()
-
     interface MainView {
         fun showRandomStuff(text: String, number: Int)
 

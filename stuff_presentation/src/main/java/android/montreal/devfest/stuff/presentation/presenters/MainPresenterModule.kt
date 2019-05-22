@@ -14,10 +14,9 @@ abstract class MainPresenterModule {
         @JvmStatic
         internal fun presenter(
                 view: MainPresenter.MainView,
-                randomStuffUseCase: ManageRandomStuffUseCase,
-                viewMore: Navigator.ViewMore
+                randomStuffUseCase: ManageRandomStuffUseCase
         ): MainPresenter {
-            return MainPresenterImpl(view, randomStuffUseCase, viewMore)
+            return MainPresenterImpl(view, randomStuffUseCase)
         }
     }
 }

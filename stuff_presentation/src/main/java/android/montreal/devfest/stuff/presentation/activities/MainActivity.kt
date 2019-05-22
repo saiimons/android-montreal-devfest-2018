@@ -2,6 +2,7 @@ package android.montreal.devfest.stuff.presentation.activities
 
 import android.content.Intent
 import android.montreal.devfest.stuff.presentation.R
+import android.montreal.devfest.stuff.presentation.navigation.AppNavigator
 import android.montreal.devfest.stuff.presentation.navigation.Navigator
 import android.montreal.devfest.stuff.presentation.presenters.MainPresenter
 import android.os.Bundle
@@ -14,9 +15,15 @@ import dagger.android.AndroidInjection
 import java.util.*
 import javax.inject.Inject
 
-class MainActivity : AppCompatActivity(), MainPresenter.MainView, Navigator.ViewMore {
+class MainActivity : AppCompatActivity(), MainPresenter.MainView {
     @Inject
     lateinit var presenter: MainPresenter
+
+    @Inject
+    lateinit var navigator: AppNavigator
+
+    @Inject
+    lateinit var viewMore: Navigator.ViewMore
 
     private var submit: Button? = null
     private var about: Button? = null
@@ -24,9 +31,6 @@ class MainActivity : AppCompatActivity(), MainPresenter.MainView, Navigator.View
     private var numberField: EditText? = null
 
     private var container: View? = null
-
-    //@Inject
-    //AppNavigator navigator;
 
     override fun onCreate(savedInstanceState: Bundle?) {
         AndroidInjection.inject(this)
@@ -40,7 +44,7 @@ class MainActivity : AppCompatActivity(), MainPresenter.MainView, Navigator.View
         submit!!.setOnClickListener { submit() }
 
         about = findViewById(R.id.about_btn)
-        about!!.setOnClickListener { presenter.openViewMoreLink() }
+        about!!.setOnClickListener { showViewMore() }
 
         container = findViewById(R.id.container)
 
@@ -71,8 +75,9 @@ class MainActivity : AppCompatActivity(), MainPresenter.MainView, Navigator.View
         Snackbar.make(container!!, R.string.error_updating_stuff, Snackbar.LENGTH_SHORT).show()
     }
 
-    override fun showViewMore() {
+    private fun showViewMore() {
         startActivity(Intent(this, AboutActivity::class.java))
-        //navigator.showViewMore(this);
+        //navigator.showViewMore(this)
+        //viewMore.showViewMore()
     }
 }

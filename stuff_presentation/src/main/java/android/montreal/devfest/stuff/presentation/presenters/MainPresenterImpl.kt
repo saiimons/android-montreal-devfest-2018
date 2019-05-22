@@ -1,6 +1,5 @@
 package android.montreal.devfest.stuff.presentation.presenters
 
-import android.montreal.devfest.stuff.presentation.navigation.Navigator
 import android.montreal.devfest.stuff.usecases.GetRandomStuffException
 import android.montreal.devfest.stuff.usecases.ManageRandomStuffUseCase
 import android.montreal.devfest.stuff.usecases.RandomStuffData
@@ -8,8 +7,7 @@ import android.montreal.devfest.stuff.usecases.SetRandomStuffException
 
 internal class MainPresenterImpl(
         private val view: MainPresenter.MainView,
-        private val manageRandomStuff: ManageRandomStuffUseCase,
-        private val viewMore: Navigator.ViewMore
+        private val manageRandomStuff: ManageRandomStuffUseCase
 ) : MainPresenter {
 
     override fun onViewReady() {
@@ -29,10 +27,5 @@ internal class MainPresenterImpl(
         } catch (e: SetRandomStuffException) {
             this.view.showUpdateError()
         }
-
-    }
-
-    override fun openViewMoreLink() {
-        viewMore.showViewMore()
     }
 }
