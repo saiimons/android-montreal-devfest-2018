@@ -1,13 +1,12 @@
 package android.montreal.devfest.stuff.usecases
 
-import android.montreal.devfest.stuff.entities.RandomStuffEntity
 import android.montreal.devfest.stuff.policies.RandomStuffVerifier
 import org.assertj.core.api.Assertions.assertThatExceptionOfType
 import org.junit.Before
 import org.junit.Test
 import org.junit.runner.RunWith
-import org.mockito.ArgumentMatchers.any
 import org.mockito.Mock
+import org.mockito.Mockito
 import org.mockito.Mockito.*
 import org.mockito.junit.MockitoJUnitRunner
 import java.util.*
@@ -40,13 +39,13 @@ class ManageRandomStuffUseCaseImplTest {
 
         doReturn(false)
                 .`when`(verifier)
-                .isValid(any(RandomStuffEntity::class.java))
+                .isValid(any())
 
         // Then When
         assertThatExceptionOfType(SetRandomStuffException::class.java)
                 .isThrownBy { useCase.setRandomStuff(data) }
 
-        verify(verifier).isValid(any(RandomStuffEntity::class.java))
+        verify(verifier).isValid(any())
     }
 
     @Test
@@ -60,7 +59,7 @@ class ManageRandomStuffUseCaseImplTest {
 
         doReturn(true)
                 .`when`(verifier)
-                .isValid(any(RandomStuffEntity::class.java))
+                .isValid(any())
         doNothing()
                 .`when`(setter)
                 .setRandomStuff(data)
@@ -69,7 +68,14 @@ class ManageRandomStuffUseCaseImplTest {
         useCase.setRandomStuff(data)
 
         // Then
-        verify(verifier).isValid(any(RandomStuffEntity::class.java))
+        verify(verifier).isValid(any())
         verify(setter).setRandomStuff(data)
     }
+
+    private fun <T> any(): T {
+        Mockito.any<T>()
+        return uninitialized()
+    }
+
+    private fun <T> uninitialized(): T = null as T
 }
