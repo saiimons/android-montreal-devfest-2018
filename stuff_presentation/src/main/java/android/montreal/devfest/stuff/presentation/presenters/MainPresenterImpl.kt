@@ -13,7 +13,7 @@ internal class MainPresenterImpl(
     override fun onViewReady() {
         try {
             val (text, number) = this.manageRandomStuff.getRandomStuff()
-            this.view.showRandomStuff(text!!, number)
+            this.view.showRandomStuff(text, number)
         } catch (e: GetRandomStuffException) {
             this.view.showMissingError()
         }

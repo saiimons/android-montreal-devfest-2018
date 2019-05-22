@@ -58,7 +58,7 @@ class MainActivity : AppCompatActivity(), MainPresenter.MainView {
         )
     }
 
-    override fun showRandomStuff(text: String, number: Int) {
+    override fun showRandomStuff(text: String?, number: Int) {
         textField!!.setText(text)
         numberField!!.setText(String.format(Locale.getDefault(), "%d", number))
     }

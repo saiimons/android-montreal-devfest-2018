@@ -6,7 +6,7 @@ interface MainPresenter {
     fun updateRandomStuff(text: String, number: Int)
 
     interface MainView {
-        fun showRandomStuff(text: String, number: Int)
+        fun showRandomStuff(text: String?, number: Int)
 
         fun showUpdateSuccess()
 
