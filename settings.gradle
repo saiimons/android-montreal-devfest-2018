@@ -1,1 +1,1 @@
-include ':app', ':stuff_data', ':stuff_policies', ':stuff_presentation', ':stuff_usecases', ':stuff_data_gateway'
+include ':app', ':stuff_data', ':stuff_policies', ':stuff_presentation', ':stuff_usecases', ':stuff_data_gateway', ':dagger'
