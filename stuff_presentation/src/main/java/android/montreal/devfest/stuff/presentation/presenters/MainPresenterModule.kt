@@ -1,8 +1,6 @@
 package android.montreal.devfest.stuff.presentation.presenters
 
-import android.montreal.devfest.stuff.presentation.navigation.Navigator
 import android.montreal.devfest.stuff.usecases.ManageRandomStuffUseCase
-
 import dagger.Module
 import dagger.Provides
 
